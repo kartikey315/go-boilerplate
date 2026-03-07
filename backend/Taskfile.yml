@@ -35,14 +35,14 @@ tasks:
         exit 1
       fi
     - echo 'Creating migration file for {{.NAME}}...'
-    - tern new -m ./internal/database/migrations {{.NAME}}
+    - ~/go/bin/tern new -m ./internal/database/migrations {{.NAME}}
 
   migrations:up:
     desc: apply all up database migrations
     deps: [ confirm ]
     cmds:
     - echo 'Running up migrations...'
-    - tern migrate -m ./internal/database/migrations --conn-string {{.BOILERPLATE_DB_DSN}}
+    - ~/go/bin/tern migrate -m ./internal/database/migrations --conn-string {{.BOILERPLATE_DB_DSN}}
 
   tidy:
     desc: format all .go files, and tidy and vendor module dependencies

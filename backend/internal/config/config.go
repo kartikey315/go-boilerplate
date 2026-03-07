@@ -16,6 +16,7 @@ type Config struct {
 	Server        ServerConfig         `koanf:"server" validate:"required"`
 	Database      DatabaseConfig       `koanf:"database" validate:"required"`
 	Redis         RedisConfig          `koanf:"redis" validate:"required"`
+	Integration   IntegrationConfig    `koanf:"integration" validate:"required"`
 	Auth          AuthConfig           `koanf:"auth" validate:"required"`
 	Observability *ObservabilityConfig `koanf:"observability"`
 }
@@ -37,15 +38,20 @@ type DatabaseConfig struct {
 	Port            int    `koanf:"port" validate:"required"`
 	User            string `koanf:"user" validate:"required"`
 	Password        string `koanf:"password"`
+	Name            string `koanf:"name" validate:"required"`
 	SSLMode         string `koanf:"ssl_mode" validate:"required"`
 	MaxOpenConns    int    `koanf:"max_open_conns" validate:"required"`
 	MaxIdleConns    int    `koanf:"max_idle_conns" validate:"required"`
-	ConnMaxLifeTime int    `koanf:"conn_max_lifetime" validate:"required"`
-	ConnMaxIdleTine int    `koanf:"conn_max_idletime" validate:"required"`
+	ConnMaxLifetime int    `koanf:"conn_max_lifetime" validate:"required"`
+	ConnMaxIdleTime int    `koanf:"conn_max_idle_time" validate:"required"`
 }
 
 type RedisConfig struct {
 	Address string `koanf:"address" validate:"required"`
+}
+
+type IntegrationConfig struct {
+	ResendAPIKey string `koanf:"resend_api_key" validate:"required"`
 }
 
 type AuthConfig struct {
