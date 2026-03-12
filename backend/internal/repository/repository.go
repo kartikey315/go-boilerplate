@@ -1,9 +1,17 @@
 package repository
 
-import "github.com/kartikey315/go-boilerplate/internal/server"
+import "github.com/kartikey315/go-tasker/internal/server"
 
-type Repositories struct{}
+type Repositories struct {
+	Todo     *TodoRepository
+	Comment  *CommentRepository
+	Category *CategoryRepository
+}
 
 func NewRepositories(s *server.Server) *Repositories {
-	return &Repositories{}
+	return &Repositories{
+		Todo:     NewTodoRepository(s),
+		Comment:  NewCommentRepository(s),
+		Category: NewCategoryRepository(s),
+	}
 }

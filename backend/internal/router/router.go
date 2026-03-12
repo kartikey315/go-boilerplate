@@ -3,10 +3,11 @@ package router
 import (
 	"net/http"
 
-	"github.com/kartikey315/go-boilerplate/internal/handler"
-	"github.com/kartikey315/go-boilerplate/internal/middleware"
-	"github.com/kartikey315/go-boilerplate/internal/server"
-	"github.com/kartikey315/go-boilerplate/internal/service"
+	"github.com/kartikey315/go-tasker/internal/handler"
+	"github.com/kartikey315/go-tasker/internal/middleware"
+	v1 "github.com/kartikey315/go-tasker/internal/router/v1"
+	"github.com/kartikey315/go-tasker/internal/server"
+	"github.com/kartikey315/go-tasker/internal/service"
 	"github.com/labstack/echo/v4"
 	echoMiddleware "github.com/labstack/echo/v4/middleware"
 	"golang.org/x/time/rate"
@@ -54,7 +55,9 @@ func NewRouter(s *server.Server, h *handler.Handlers, services *service.Services
 	registerSystemRoutes(router, h)
 
 	// register versioned routes
-	router.Group("/api/v1")
+	v1Router := router.Group("/api/v1")
+
+	v1.RegisterV1Routes(v1Router, h, middlewares)
 
 	return router
 }

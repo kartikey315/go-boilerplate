@@ -1,5 +1,5 @@
 {
-  "name": "go-boilerplate",
+  "name": "go-tasker",
   "version": "1.0.0",
   "scripts": {
     "build": "turbo run build",

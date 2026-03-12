@@ -3,14 +3,14 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "go-boilerplate",
+      "name": "go-tasker",
       "devDependencies": {
         "turbo": "^2.8.13",
         "typescript": "^5.9.3",
       },
     },
     "packages/emails": {
-      "name": "@boilerplate/emails",
+      "name": "@tasker/emails",
       "version": "1.0.0",
       "dependencies": {
         "@react-email/components": "0.0.34",
@@ -24,11 +24,11 @@
       },
     },
     "packages/openapi": {
-      "name": "@boilerplate/openapi",
+      "name": "@tasker/openapi",
       "version": "1.0.0",
       "dependencies": {
         "@anatine/zod-openapi": "^2.2.7",
-        "@boilerplate/zod": "workspace:*",
+        "@tasker/zod": "workspace:*",
         "@ts-rest/core": "^3.52.1",
         "@ts-rest/open-api": "^3.52.1",
         "ts-pattern": "^5.7.0",
@@ -44,7 +44,7 @@
       },
     },
     "packages/zod": {
-      "name": "@boilerplate/zod",
+      "name": "@tasker/zod",
       "version": "1.0.0",
       "dependencies": {
         "@anatine/zod-openapi": "^2.2.7",
@@ -76,11 +76,11 @@
 
     "@babel/types": ["@babel/types@7.29.0", "http://registry.npmjs.org/@babel/types/-/types-7.29.0.tgz", { "dependencies": { "@babel/helper-string-parser": "^7.27.1", "@babel/helper-validator-identifier": "^7.28.5" } }, "sha512-LwdZHpScM4Qz8Xw2iKSzS+cfglZzJGvofQICy7W7v4caru4EaAmyUuO6BGrbyQ2mYV11W0U8j5mBhd14dd3B0A=="],
 
-    "@boilerplate/emails": ["@boilerplate/emails@workspace:packages/emails"],
+    "@tasker/emails": ["@tasker/emails@workspace:packages/emails"],
 
-    "@boilerplate/openapi": ["@boilerplate/openapi@workspace:packages/openapi"],
+    "@tasker/openapi": ["@tasker/openapi@workspace:packages/openapi"],
 
-    "@boilerplate/zod": ["@boilerplate/zod@workspace:packages/zod"],
+    "@tasker/zod": ["@tasker/zod@workspace:packages/zod"],
 
     "@emnapi/runtime": ["@emnapi/runtime@1.8.1", "http://registry.npmjs.org/@emnapi/runtime/-/runtime-1.8.1.tgz", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-mehfKSMWjjNol8659Z8KxEMrdSJDDot5SXMq00dM8BN4o+CLNXQ0xH2V7EchNHV4RmbZLmmPdEaXZc5H2FXmDg=="],
 

@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/go-playground/validator/v10"
-	"github.com/kartikey315/go-boilerplate/internal/errs"
+	"github.com/kartikey315/go-tasker/internal/errs"
 	"github.com/labstack/echo/v4"
 )
 

@@ -3,9 +3,9 @@ package handler
 import (
 	"time"
 
-	"github.com/kartikey315/go-boilerplate/internal/middleware"
-	"github.com/kartikey315/go-boilerplate/internal/server"
-	"github.com/kartikey315/go-boilerplate/internal/validation"
+	"github.com/kartikey315/go-tasker/internal/middleware"
+	"github.com/kartikey315/go-tasker/internal/server"
+	"github.com/kartikey315/go-tasker/internal/validation"
 	"github.com/labstack/echo/v4"
 	"github.com/newrelic/go-agent/v3/integrations/nrpkgerrors"
 	"github.com/newrelic/go-agent/v3/newrelic"

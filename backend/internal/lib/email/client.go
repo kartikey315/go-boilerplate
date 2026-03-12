@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"html/template"
 
-	"github.com/kartikey315/go-boilerplate/internal/config"
+	"github.com/kartikey315/go-tasker/internal/config"
 	"github.com/pkg/errors"
 	"github.com/resend/resend-go/v2"
 	"github.com/rs/zerolog"
@@ -23,7 +23,7 @@ func NewClient(cfg *config.Config, logger *zerolog.Logger) *Client {
 	}
 }
 
-func (c *Client) SendEmail(to, subject string, templateName Template, data map[string]string) error {
+func (c *Client) SendEmail(to, subject string, templateName Template, data map[string]any) error {
 	tmplPath := fmt.Sprintf("%s/%s.html", "templates/emails", templateName)
 
 	tmpl, err := template.ParseFiles(tmplPath)
@@ -37,7 +37,7 @@ func (c *Client) SendEmail(to, subject string, templateName Template, data map[s
 	}
 
 	params := &resend.SendEmailRequest{
-		From:    fmt.Sprintf("%s <%s>", "Boilerplate", "onboarding@resend.dev"),
+		From:    fmt.Sprintf("%s <%s>", "Tasker", "onboarding@resend.dev"),
 		To:      []string{to},
 		Subject: subject,
 		Html:    body.String(),

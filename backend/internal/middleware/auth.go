@@ -7,8 +7,8 @@ import (
 
 	"github.com/clerk/clerk-sdk-go/v2"
 	clerkhttp "github.com/clerk/clerk-sdk-go/v2/http"
-	"github.com/kartikey315/go-boilerplate/internal/errs"
-	"github.com/kartikey315/go-boilerplate/internal/server"
+	"github.com/kartikey315/go-tasker/internal/errs"
+	"github.com/kartikey315/go-tasker/internal/server"
 	"github.com/labstack/echo/v4"
 )
 

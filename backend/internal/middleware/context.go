@@ -3,8 +3,8 @@ package middleware
 import (
 	"context"
 
-	"github.com/kartikey315/go-boilerplate/internal/logger"
-	"github.com/kartikey315/go-boilerplate/internal/server"
+	"github.com/kartikey315/go-tasker/internal/logger"
+	"github.com/kartikey315/go-tasker/internal/server"
 	"github.com/labstack/echo/v4"
 	"github.com/newrelic/go-agent/v3/newrelic"
 	"github.com/rs/zerolog"

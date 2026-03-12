@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/kartikey315/go-boilerplate/internal/server"
+	"github.com/kartikey315/go-tasker/internal/server"
 
 	"github.com/labstack/echo/v4"
 )

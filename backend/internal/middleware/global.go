@@ -3,9 +3,9 @@ package middleware
 import (
 	"net/http"
 
-	"github.com/kartikey315/go-boilerplate/internal/errs"
-	"github.com/kartikey315/go-boilerplate/internal/server"
-	"github.com/kartikey315/go-boilerplate/internal/sqlerr"
+	"github.com/kartikey315/go-tasker/internal/errs"
+	"github.com/kartikey315/go-tasker/internal/server"
+	"github.com/kartikey315/go-tasker/internal/sqlerr"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"github.com/pkg/errors"

@@ -12,8 +12,8 @@ import (
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/jackc/pgx/v5/tracelog"
-	"github.com/kartikey315/go-boilerplate/internal/config"
-	loggerConfig "github.com/kartikey315/go-boilerplate/internal/logger"
+	"github.com/kartikey315/go-tasker/internal/config"
+	loggerConfig "github.com/kartikey315/go-tasker/internal/logger"
 	"github.com/newrelic/go-agent/v3/integrations/nrpgx5"
 	"github.com/rs/zerolog"
 )
