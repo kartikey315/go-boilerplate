@@ -8,14 +8,14 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/kartikey315/go-boilerplate/internal/config"
-	"github.com/kartikey315/go-boilerplate/internal/database"
-	"github.com/kartikey315/go-boilerplate/internal/handler"
-	"github.com/kartikey315/go-boilerplate/internal/logger"
-	"github.com/kartikey315/go-boilerplate/internal/repository"
-	"github.com/kartikey315/go-boilerplate/internal/router"
-	"github.com/kartikey315/go-boilerplate/internal/server"
-	"github.com/kartikey315/go-boilerplate/internal/service"
+	"github.com/kartikey315/go-tasker/internal/config"
+	"github.com/kartikey315/go-tasker/internal/database"
+	"github.com/kartikey315/go-tasker/internal/handler"
+	"github.com/kartikey315/go-tasker/internal/logger"
+	"github.com/kartikey315/go-tasker/internal/repository"
+	"github.com/kartikey315/go-tasker/internal/router"
+	"github.com/kartikey315/go-tasker/internal/server"
+	"github.com/kartikey315/go-tasker/internal/service"
 )
 
 const DefaultContextTimeout = 30
